@@ -1,0 +1,20 @@
+{
+  "name": "doorshap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "str":"npx tailwindcss -i ./src/contantus.css -o ./dist/output2.css --watch",
+    "str2":"npx tailwindcss -i ./src/aboutus.css -o ./dist/output3.css --watch",
+    "shop":"npx tailwindcss -i ./src/shop.css -o ./dist/output4.css --watch",
+    "register":"npx tailwindcss -i ./src/register.css -o ./dist/output5.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^4.7.2",
+    "tailwindcss": "^3.4.1"
+  }
+}

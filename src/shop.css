@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+  ::-webkit-scrollbar {
+    width: 10px; /* عرض اسکرول‌بار */
+  }
+  
+  /* مسیر یا track اسکرول‌بار */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* رنگ پس‌زمینه‌ی مسیر */
+    border-radius: 10px; /* گوشه‌های گرد */
+  }
+  
+  /* دسته یا thumb اسکرول‌بار */
+  ::-webkit-scrollbar-thumb {
+    background: #e2bb58; /* رنگ دسته */
+    border-radius: 10px; /* گوشه‌های گرد */
+  }
+  /* وقتی ماوس روی دسته اسکرول‌بار قرار می‌گیرد */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d19d1e; /* رنگ دسته در حالت hover */
+  }
+  .hero {
+    /* تعریف شکل هلالی برای عنصر در بالا */
+    clip-path: ellipse(70% 100% at 50% 0%);
+    /* تنظیمات برای تصویر پس‌زمینه */
+    background-image: url(./img/عکس\ وکیل\ هوش.png);
+    height: 300px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+  }
+  
+  
+
+
+.footer{
+    text-align: center;
+   background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
+    color: white;
+    padding: 20px;
+    border-radius: 40px 40px 0 0 ;
+}
+.footer i{
+    margin: 0 5px;
+    font-size: 19px;
+}
+
+.rang2{
+  
+  background: radial-gradient( circle farthest-corner at 10% 20%, rgba(37, 130, 251, 0.98) 0.1%, rgb(81, 0, 128) 99.8% );
+ 
+}
+.hover-btn {
+    background-image: radial-gradient( circle 763px at 18.3% 24.1%,  rgba(255,249,137,1) 7.4%, rgba(226,183,40,1) 58.3% );
+    color: #ffffff; /* رنگ متن دکمه */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease; /* انیمیشن تغییر سایه زمانی که هاور اتفاق می‌افتد */
+    position: relative; /* تغییر موقعیت دکمه به relative برای استفاده از box-shadow */
+}
+
+.hover-btn:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); /* ایجاد سایه به عنوان نور هنگام هاور */
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,209,67,1) 0%, rgba(255,145,83,1) 90% );
+}
+.custom-shape-divider-top-1710246834 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1710246834 svg {
+  position: relative;
+  display: block;
+  width: calc(105% + 1.3px);
+  height: 167px;
+}
+
+.custom-shape-divider-top-1710246834 .shape-fill {
+  fill: #FF9153;
+}
+

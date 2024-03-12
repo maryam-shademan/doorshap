@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rigester</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.x/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../dist/outpu3.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="../dist/output4.css" />
+	
+ 
+</head>
+<body>
+    
+    <section>
+        <div class="custom-shape-divider-top-1710246834">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section class="flex justify-center mt-48">
+        <div role="tablist" class=" tabs tabs-lifted w-3/5 " id="tablist ">
+            <a role="tab" class="tab tab-active [--tab-bg:yellow] [--tab-border-color:orange] text-primary" onclick="openTab(1)">صفحه اصلی <span class="icon">🔵</span></a>
+            <a role="tab" class="tab tab-active [--tab-bg:yellow] [--tab-border-color:orange] text-primary" onclick="openTab(2)"> فروشگاه <span class="icon">🔴</span></a>
+            <a role="tab" class="tab tab-active [--tab-bg:yellow] [--tab-border-color:orange] text-primary" onclick="openTab(3)"> تماس باما<span class="icon">⚪</span></a>
+          </div>
+          
+    </section>
+    <section>
+        <div class="flex justify-center items-center h-screen">
+            <div class="bg-gray-200 border-solid mb-16  border-amber-200 ">
+                <div class="card shrink-0 w-full max-w-sm shadow-2xl   mt-4">
+                    <form class="card-body">
+                        <div class="form-control">
+                            <label for="name" class="input input-bordered flex items-center gap-2 mt-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+                                </svg>
+                                <input id="name" type="text" class="grow" placeholder="نام" />
+                            </label>
+                            <label for="lastname" class="input input-bordered flex items-center gap-2 mt-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+                                </svg>
+                                <input id="lastname" type="text" class="grow" placeholder="نام خانوادگی" />
+                            </label>
+                            <label for="email" class="input input-bordered flex items-center gap-2 mt-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70">
+                                    <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                                    <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                                </svg>
+                                <input id="email" type="text" class="grow" placeholder="ایمیل" />
+                            </label>
+                            <label class="mt-4">
+                                
+                               <input type="text" placeholder="آدرس راواردکنید "class="input input-bordered input-accent w-full max-w-xs" />
+                            </label>
+                            <button class="hover-btn btn-primary mt-4 text-black">خریداری محصول</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+      <section>
+        <footer class="footer footer-center p-10 bg-primary text-primary-content mt-3">
+          
+          <aside>
+            <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" class="inline-block fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
+            <p class="font-bold">
+          ساخته شده توسط تیم جکسروید <br>
+            </p> 
+            <p>Copyright © 2024 -است wpcpersian  تمامی حقوق مربوط سایت </p>
+          </aside> 
+        
+          </footer>
+      </section>
+      <script>
+        function openTab(tabIndex) {
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(tab, index) {
+    if (index + 1 === tabIndex) {
+      tab.classList.add('tab-active');
+    } else {
+      tab.classList.remove('tab-active');
+    }
+  });
+}
+
+      </script>
+      
+</body>
+</html>
