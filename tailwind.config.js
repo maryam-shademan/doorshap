@@ -7,7 +7,13 @@ module.exports = {
   plugins: [require("daisyui")],
   daisyui: {
     themes: ["cupcake"],
-  },
-}
-
-
+    theme: {
+      extend: {
+        colors: {
+          yel: "#FFD143",
+          org: "#FF9153",
+        },
+      },
+    },
+  }
+} 
