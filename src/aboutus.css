@@ -69,3 +69,167 @@
 }
 
 
+
+*/اسلایدر*/
+
+
+.swiper-container {
+  background-color: transparent; /* Added line */
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+ 
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+  background-color: transparent; /* Added line */
+}
+
+.swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+  background-color: transparent; /* Added line */
+}
+
+.swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+  background-color: transparent; /* Added line */
+}
+
+.swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+  background-color: transparent; /* Added line */
+}
+
+.swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+  background-color: transparent; /* Added line */
+}
+
+.swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+.swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+.swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+.swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+.swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+}
+
+#product-title {
+  font-size: 2rem;  /* اندازه فونت را بزرگتر کنید */
+  font-weight: bold;  /* عنوان را بولد کنید */
+  text-align: center;  /* متن را در مرکز تراز کنید */
+  color: #333;  /* رنگ متن را تنظیم کنید */
+  margin: 0 auto;  /* حاشیه های چپ و راست را به طور خودکار تنظیم کنید */
+  padding: 1rem 2rem;  /* حاشیه بالا و پایین را تنظیم کنید */
+  border: 2px solid #ddd;  /* یک حاشیه به عنوان جداکننده اضافه کنید */
+  border-radius: 10px;  /* گوشه های عنوان را گرد کنید */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  /* سایه ای برای برجسته کردن عنوان اضافه کنید */
+  transition: all 0.3s ease-in-out;  /* انیمیشن برای تغییر اندازه و رنگ */
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  animation: border-color 2s linear infinite;
+}
+
+#product-title:hover {
+  font-size: 2.2rem;  /* اندازه فونت را هنگام هاور افزایش دهید */
+  color: #f83d04;  /* رنگ متن را هنگام هاور تغییر دهید */
+}
+
+
+@keyframes border-color {
+  0% {
+    border-color: #ddd;
+  }
+  25% {
+    border-color: #5a08f1;
+  }
+  50% {
+    border-color: rgb(216, 73, 7);
+  }
+  75% {
+    border-color: rgb(255, 115, 0);
+  }
+  100% {
+    border-color: #ddd;
+  }
+}
+
+
+#quote{
+  font-size:44px;
+  line-height:50px;
+  color:#dedede;
+}
+
+button {
+  padding:10px;
+  margin: 20px 0;
+}
+
+
+
+
+.section4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 2px solid #ddd;
+}
+
+.word {
+  margin-right: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #f00;
+  pointer-events: none;
+}
+.container {
+  /* Existing styles... */
+  flex-wrap: wrap;  /* Ensure wrapping on all screens */
+}
+
+@media (max-width: 768px) {  /* Target smaller screens (adjust breakpoint as needed) */
+  .stack {
+    flex-direction: row;  /* Make cards display in a row */
+  }
+}
+
