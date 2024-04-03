@@ -2289,10 +2289,6 @@ details.collapse summary::-webkit-details-marker {
   left: 0.5rem;
 }
 
-.left-5 {
-  left: 1.25rem;
-}
-
 .right-1 {
   right: 0.25rem;
 }
@@ -2569,10 +2565,6 @@ details.collapse summary::-webkit-details-marker {
 
 .gap-5 {
   gap: 1.25rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .space-x-1 > :not([hidden]) ~ :not([hidden]) {

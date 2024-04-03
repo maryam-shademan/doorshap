@@ -222,6 +222,7 @@ button {
   background-color: #f00;
   pointer-events: none;
 }
+
 .container {
   /* Existing styles... */
   flex-wrap: wrap;  /* Ensure wrapping on all screens */
