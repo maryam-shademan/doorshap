@@ -9,7 +9,8 @@
     "str":"npx tailwindcss -i ./src/contantus.css -o ./dist/output2.css --watch",
     "str2":"npx tailwindcss -i ./src/aboutus.css -o ./dist/output3.css --watch",
     "shop":"npx tailwindcss -i ./src/shop.css -o ./dist/output4.css --watch",
-    "register":"npx tailwindcss -i ./src/register.css -o ./dist/output5.css --watch"
+    "register":"npx tailwindcss -i ./src/register.css -o ./dist/output5.css --watch",
+    "store":"npx tailwindcss -i ./src/store.css -o ./dist/output6.css --watch"
   },
   "author": "",
   "license": "ISC",
