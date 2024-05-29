@@ -1,207 +1,488 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="bumblebee">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>درباره ما</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.x/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-  <link rel="stylesheet" href="../dist/output3.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script>
-    // use a script tag or an external JS file
-    document.addEventListener("DOMContentLoaded", (event) => {
-      // gsap code here!
-    });
-
-  </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.webp" />
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/app.css">
+    <link rel="stylesheet" href="../dist/output3.css" />
+    <title>@lang(&#039;messages.menu_about&#039;)</title>
+    <script type="module" crossorigin src="http://127.0.0.1:8000/js/about.js"></script>
+    <link rel="stylesheet" crossorigin href="http://127.0.0.1:8000/css/about.css">
 </head>
 
-<body class="">
-  <section>
-    <div class="hero " style="background-image: url(../img/img4.jpg);">
-      <div class="hero-overlay bg-opacity-60"></div>
-      <div class="hero-content text-center text-neutral-content">
-        <div class="max-w-md">
-          <h1 class="mb-5 text-5xl font-bold">wpc.com</h1>
-          <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-            quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-          <button class="hover-btn btn btn-primary text-black">شروع کنید</button>
+<body class="overflow-x-hidden">
+    <style>
+        .loadng {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            z-index: 9999
+        }
+
+        .hidein {
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: .5s;
+            transition-timing-function: ease-in-out;
+            pointer-events: none
+        }
+
+        .loadng-text {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            line-height: 100px
+        }
+
+        .loadng-text span {
+            display: inline-block;
+            margin: 0 5px;
+            color: #000;
+            font-family: Quattrocento Sans, sans-serif
+        }
+
+        .loadng-text span:nth-child(1) {
+            filter: blur(0px);
+            animation: blur-text 1.5s 0s infinite linear alternate
+        }
+
+        .loadng-text span:nth-child(2) {
+            filter: blur(0px);
+            animation: blur-text 1.5s .2s infinite linear alternate
+        }
+
+        .loadng-text span:nth-child(3) {
+            filter: blur(0px);
+            animation: blur-text 1.5s .4s infinite linear alternate
+        }
+
+        .loadng-text span:nth-child(4) {
+            filter: blur(0px);
+            animation: blur-text 1.5s .6s infinite linear alternate
+        }
+
+        .loadng-text span:nth-child(5) {
+            filter: blur(0px);
+            animation: blur-text 1.5s .8s infinite linear alternate
+        }
+
+        .loadng-text span:nth-child(6) {
+            filter: blur(0px);
+            animation: blur-text 1.5s 1s infinite linear alternate
+        }
+
+        .loadng-text span:nth-child(7) {
+            filter: blur(0px);
+            animation: blur-text 1.5s 1.2s infinite linear alternate
+        }
+
+        @keyframes blur-text {
+            0% {
+                filter: blur(0px)
+            }
+
+            to {
+                filter: blur(4px)
+            }
+        }
+    </style>
+    <header>
+        <nav
+            class="navbar top-0 bg-base-100 shadow-lg fixed z-10 rounded-b-3xl bg-gradient-to-bl from-[#FF9153] to-[#FFD143] border-gray-200">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="/en/about_us">About us</a></li>
+                        <li><a href="/en/contact_us">Contact us</a></li>
+                        <li>
+                            <details>
+                                <summary>Store</summary>
+                                <ul class="p-2">
+                                    <li><a href="/en/indoor">Indoor</a></li>
+                                    <li><a href="/en/outdoor">Outdoor</a></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li><a href="/en/">Home</a></li>
+                    </ul>
+                </div>
+                <a href="/en" class="rounded-full btn btn-ghost text-xl">
+                    <img src="/logo.webp" class="w-16 " alt="wpcpersian Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black"></span>
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="/en/about_us">About us</a></li>
+                    <li><a href="/en/contact_us">Contact us</a></li>
+                    <li>
+                        <details>
+                            <summary>Store</summary>
+                            <ul class="p-2">
+                                <li><a href="/en/indoor">Indoor</a></li>
+                                <li><a href="/en/outdoor">Outdoor</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="/en/">Home</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <div
+                    class="dropdown dropdown-end flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
+                    <div tabindex="0" role="button" class="btn glass m-1 flex flex-row justify-center items-center">
+                        <img src="/img/uk.webp" class="w-5 h-5 rounded-full" alt="">
+                        <div>English</div>
+
+                    </div>
+                    <ul tabindex="0" class="dropdown-content z-50 menu mt-28 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <a href="/en" class="flex flex-row justify-center items-center">
+                                <img src="/img/uk.webp" class="w-5 h-5 rounded-full" alt="">
+                                <div>
+                                    English
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ar" class="flex flex-row justify-center items-center">
+                                <img src="/img/ar.webp" class="w-5 h-5 rounded-full" alt="">
+                                <div>
+                                    العربیه
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/tr" class="flex flex-row justify-center items-center">
+                                <img src="/img/tr.webp" class="w-5 h-5 rounded-full" alt="">
+                                <div>
+                                    Türkçe
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/ru" class="flex flex-row justify-center items-center">
+                                <img src="/img/ru.webp" class="w-5 h-5 rounded-full" alt="">
+                                <div>
+                                    русский язык
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/fa" class="flex flex-row justify-center items-center">
+                                <img src="/img/fa.webp" class="w-5 h-5 rounded-full" alt="">
+                                <div>
+                                    فارسی
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div></div>
+    <div id="cursor"></div>
+    <div class="loadng" id="loader">
+        <div class="loadng-text">
+            <span class="loadng-text-words">L</span>
+            <span class="loadng-text-words">O</span>
+            <span class="loadng-text-words">A</span>
+            <span class="loadng-text-words">D</span>
+            <span class="loadng-text-words">I</span>
+            <span class="loadng-text-words">N</span>
+            <span class="loadng-text-words">G</span>
         </div>
-      </div>
     </div>
-  </section>
-  <section>
+    <div class="w-full min-h-30 z-30"> </div>
+    <div id="mute"
+        class="fixed btn h-14 blue-background bg-white btn-outline hover:bg-white rounded-full right-5 mt-20">
+        <svg id="sound-off" style="display: none;" width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+            fill-rule="evenodd" clip-rule="evenodd">
+            <path
+                d="M18 23l-9.305-5.998.835-.651 7.47 4.815v-10.65l1-.781v13.265zm0-15.794l5.384-4.206.616.788-23.384 18.264-.616-.788 5.46-4.264h-2.46v-10h5.691l9.309-6v6.206zm-11.26 8.794l1.26-.984v-7.016h-4v8h2.74zm10.26-8.013v-5.153l-8 5.157v6.244l8-6.248z" />
+        </svg>
+        <svg id="sound-on" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+            clip-rule="evenodd">
+            <path
+                d="M15 23l-9.309-6h-5.691v-10h5.691l9.309-6v22zm-9-15.009v8.018l8 5.157v-18.332l-8 5.157zm14.228-4.219c2.327 1.989 3.772 4.942 3.772 8.229 0 3.288-1.445 6.241-3.77 8.229l-.708-.708c2.136-1.791 3.478-4.501 3.478-7.522s-1.342-5.731-3.478-7.522l.706-.706zm-2.929 2.929c1.521 1.257 2.476 3.167 2.476 5.299 0 2.132-.955 4.042-2.476 5.299l-.706-.706c1.331-1.063 2.182-2.729 2.182-4.591 0-1.863-.851-3.529-2.184-4.593l.708-.708zm-12.299 1.299h-4v8h4v-8z" />
+        </svg>
+    </div>
+    <main class="pt-7">
+        <section>
+            <div class="hero" style="background-image: url(/img/img4.jpg);">
+                <div class="hero-overlay bg-opacity-60"></div>
+                <div class="hero-content text-center text-neutral-content">
+                    <div class="max-w-md">
+                        <h1 class="mb-5 text-5xl font-bold">wpersianc.com</h1>
+                        <!-- <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                                exercitationem
+                                quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <button class="hover-btn btn btn-primary text-black">شروع کنید</button> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
 
-  </section>
-  <section>
-    <div
-      class="container flex justify-center  relative px-4  flex-wrap gap-12 mt-10 lg:left-20 sm:flex-wrap md:flex-wrap">
-      <div class="stack">
-        <div class="card shadow-md bg-gradient-to-br from-[#FF9153] to-[#FFD143] text-primary-content">
-          <div class="card-body ">
-            <img src="../img/photo_2024-04-02_23-42-12.jpg" class="w-full h-full object-cover blur-sm " alt="Notification Image">
-            <h2 class="card-title absolute top-2 left-2 text-white ">20 سال سابقه کار</h2>
-          </div>
-        </div>
+        </section>
+        <section>
+            <div
+                class="container flex justify-center  relative px-4  flex-wrap gap-12 mt-10 lg:left-20 sm:flex-wrap md:flex-wrap">
+                <div class="stack">
+                    <div class="card shadow-md bg-gradient-to-br from-[#FF9153] to-[#FFD143] text-primary-content">
+                        <div class="card-body ">
+                            <img src="/img/photo_2024-04-02_23-42-12.jpg" class="w-full h-full object-cover blur-sm "
+                                alt="Notification Image">
+                            <h2 class="card-title absolute top-2 left-2 text-white ">20 سال سابقه کار</h2>
+                        </div>
+                    </div>
 
-        <div class="card shadow bg-primary text-primary-content">
-          <div class="card-body">
+                    <div class="card shadow bg-primary text-primary-content">
+                        <div class="card-body">
 
-          </div>
-        </div>
-        <div class="card shadow-sm bg-primary text-primary-content">
-          <div class="card-body">
-          </div>
-        </div>
-      </div>
+                        </div>
+                    </div>
+                    <div class="card shadow-sm bg-primary text-primary-content">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
 
-      <div class="stack">
-        <div class="card shadow-md bg-gradient-to-br from-[#FF9153] to-[#FFD143] text-primary-content">
-          <div class="card-body">
-            <img src="../img/photo_2024-04-02_23-42-12.jpg" class="w-full h-full object-cover blur-sm" alt="Notification Image">
-            <h2 class="card-title absolute top-2 left-2 text-white">Notification 1</h2>
-          </div>
-        </div>
+                <div class="stack">
+                    <div class="card shadow-md bg-gradient-to-br from-[#FF9153] to-[#FFD143] text-primary-content">
+                        <div class="card-body">
+                            <img src="/img/photo_2024-04-02_23-42-12.jpg" class="w-full h-full object-cover blur-sm"
+                                alt="Notification Image">
+                            <h2 class="card-title absolute top-2 left-2 text-white">Notification 1</h2>
+                        </div>
+                    </div>
 
-        <div class="card shadow bg-primary text-primary-content">
-          <div class="card-body">
+                    <div class="card shadow bg-primary text-primary-content">
+                        <div class="card-body">
 
-          </div>
-        </div>
+                        </div>
+                    </div>
 
-        <div class="card shadow-sm bg-primary text-primary-content">
-          <div class="card-body">
+                    <div class="card shadow-sm bg-primary text-primary-content">
+                        <div class="card-body">
 
-          </div>
-        </div>
-      </div>
-      <div class="stack">
-        <div class="card shadow-md bg-gradient-to-br from-[#FF9153] to-[#FFD143] text-primary-content">
-          <div class="card-body">
-            <img src="../img/images (1).jpg" class="w-full h-full object-cover blur-sm" alt="Notification Image">
-            <h2 class="card-title absolute top-2 left-2 text-white">Notification 1</h2>
-          </div>
-        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stack">
+                    <div class="card shadow-md bg-gradient-to-br from-[#FF9153] to-[#FFD143] text-primary-content">
+                        <div class="card-body">
+                            <img src="/img/images (1).jpg" class="w-full h-full object-cover blur-sm"
+                                alt="Notification Image">
+                            <h2 class="card-title absolute top-2 left-2 text-white">Notification 1</h2>
+                        </div>
+                    </div>
 
-        <div class="card shadow bg-primary text-primary-content">
-          <div class="card-body">
+                    <div class="card shadow bg-primary text-primary-content">
+                        <div class="card-body">
 
-          </div>
-        </div>
+                        </div>
+                    </div>
 
-        <div class="card shadow-sm bg-primary text-primary-content">
-          <div class="card-body">
+                    <div class="card shadow-sm bg-primary text-primary-content">
+                        <div class="card-body">
 
-          </div>
-        </div>
-      </div>
-      <script>
-        const cards = document.querySelectorAll(".card");
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const cards = document.querySelectorAll(".card");
 
-        cards.forEach(card => {
-          card.addEventListener("mouseenter", () => {
-            const img = card.querySelector("img");
-            img.classList.remove("blur-sm");
-          });
+                    cards.forEach(card => {
+                        card.addEventListener("mouseenter", () => {
+                            const img = card.querySelector("img");
+                            img.classList.remove("blur-sm");
+                        });
 
-          card.addEventListener("mouseleave", () => {
-            const img = card.querySelector("img");
-            img.classList.add("blur-sm");
-          });
-        });
-      </script>
-  </section>
+                        card.addEventListener("mouseleave", () => {
+                            const img = card.querySelector("img");
+                            img.classList.add("blur-sm");
+                        });
+                    });
+                </script>
+        </section>
 
-  <section class="flex justify-center mt-12">
-    <h2 class="text-lg text-wrap" id="product-title"> چرا ما؟</h2>
+        <section class="flex justify-center flex-col mt-12">
+            <h2 class="text-lg text-wrap" id="product-title">@lang('about.why_us')</h2>
+            <script>
+                const titleElement = document.getElementById("product-title");
+                // انیمیشن اسکرول به بالا
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 100) {
+                        titleElement.classList.add("animated");
+                    } else {
+                        titleElement.classList.remove("animated");
+                    }
+                });
+
+                // انیمیشن اسکرول به پایین
+                window.addEventListener("scroll", () => {
+                    if (window.scrollY > 500) {
+                        titleElement.classList.add("animated-down");
+                    } else {
+                        titleElement.classList.remove("animated-down");
+                    }
+                });
+
+                // انیمیشن کلیک
+                titleElement.addEventListener("click", () => {
+                    titleElement.classList.add("animated-click");
+                    setTimeout(() => {
+                        titleElement.classList.remove("animated-click");
+                    }, 300);
+                });
+            </script>
+        </section>
+
+        <section class="mt-10 px-28">
+            <div tabindex="0"
+                class="collapse bg-gradient-to-tr from-[#ff8741] to-[#ffc002]  text-primary-content focus:bg-orange-500 focus:text-secondary-content">
+                <div class="collapse-title font-bold">
+                    @lang('about.our_company')
+                </div>
+                <div class="collapse-content">
+                    <p>@lang('about.company')</p>
+                </div>
+            </div>
+        </section>
+        <section class="mt-2 px-24">
+            <div tabindex="0"
+                class="collapse bg-gradient-to-tl from-[#FF9153] to-[#FFD143] text-primary-content focus:bg-secondary focus:text-secondary-content">
+                <div class="collapse-title font-bold">
+                    @lang('about.how_order')
+                </div>
+                <div class="collapse-content">
+                    <p>@lang('about.order')</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white overflow-y-hidden rounded-t-2xl text-black p-4 max-w-full">
+        <div class="footer footer-center">
+            <div class="grid grid-flow-col gap-6 mt-8 px-2">
+                <a href="/@lang('messages.lang')/about_us"
+                    class="link link-hover text-black hover:text-amber-300 text-lg font-bold">@lang('messages.menu_contact')</a>
+                <a href="/@lang('messages.lang')/contact_us"
+                    class="link link-hover text-black hover:text-amber-300 text-lg font-bold">@lang('messages.menu_about')</a>
+            </div>
+            <div>
+                <div class="flex justify-center space-x-8">
+                    <a href="https://wa.me/YOURNUMBER"
+                        class="transition-all duration-100 ease-in-out text-black hover:-translate-y-4">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                    <a href="tel:YOURNUMBER"
+                        class=" transition-all duration-100 ease-in-out text-black hover:-translate-y-4">
+                        <i class="fas fa-phone-alt fa-2x"></i>
+                    </a>
+                    <a href="https://instagram.com/YOURUSERNAME"
+                        class="transition-all duration-100 ease-in-out text-black hover:-translate-y-4">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://github.com/YOURUSERNAME"
+                        class="transition-all duration-100 ease-in-out text-black hover:-translate-y-4">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a href="https://t.me/YOURUSERNAME"
+                        class="transition-all duration-100 ease-in-out text-black hover:-translate-y-4">
+                        <i class="fab fa-telegram-plane fa-2x"></i>
+                    </a>
+                </div>
+                <div class="flex justify-start items-center">
+                    <aside>
+                        <p class=" hover:text-amber-200 mr-4 mt-8">
+                            <!-- TODO: 2024 should be dynamic using php -->
+                            @lang('messages.rights')
+                        </p>
+                    </aside>
+                </div>
+            </div>
+    </footer>
+
+    <script src="http://127.0.0.1:8000/js/app.js"></script>
     <script>
-      const titleElement = document.getElementById("product-title");
 
-      // انیمیشن اسکرول به بالا
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 100) {
-          titleElement.classList.add("animated");
-        } else {
-          titleElement.classList.remove("animated");
+        function clickEffect(e) {
+            var d = document.createElement("div");
+            d.className = "clickEffect";
+            d.style.top = e.clientY + "px"; d.style.left = e.clientX + "px";
+            document.body.appendChild(d);
+            d.addEventListener('animationend', function () { d.parentElement.removeChild(d); }.bind(this));
         }
-      });
-
-      // انیمیشن اسکرول به پایین
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 500) {
-          titleElement.classList.add("animated-down");
+        document.addEventListener('click', clickEffect);
+        let whatisthedevice = navigator.userAgent
+        const cursor = document.getElementById('cursor');
+        if (whatisthedevice.match(/Android/i)
+            || whatisthedevice.match(/webOS/i)
+            || whatisthedevice.match(/iPhone/i)
+            || whatisthedevice.match(/iPad/i)
+            || whatisthedevice.match(/iPod/i)
+            || whatisthedevice.match(/BlackBerry/i)
+            || whatisthedevice.match(/Windows Phone/i)) {
+            cursor.style.visibility = 'hidden'
         } else {
-          titleElement.classList.remove("animated-down");
+            const body = document.body;
+            // Update circle position on mouse movement
+            body.addEventListener('mousemove', (event) => {
+                cursor.style.left = event.clientX + 'px';
+                cursor.style.top = event.clientY + 'px';
+            });
         }
-      });
 
-      // انیمیشن کلیک
-      titleElement.addEventListener("click", () => {
-        titleElement.classList.add("animated-click");
-        setTimeout(() => {
-          titleElement.classList.remove("animated-click");
-        }, 300);
-      });
+        // toggling mute Button
+        const svgOne = document.getElementById('sound-on')
+        const svgTwo = document.getElementById('sound-off')
 
+        function toggleSVGs(clickedSVG) {
+            if (clickedSVG === svgOne) {
+                svgOne.style.display = 'none';
+                svgTwo.style.display = 'block';
+            } else {
+                svgOne.style.display = 'block';
+                svgTwo.style.display = 'none';
+            }
+        }
+
+        svgOne.addEventListener('click', () => toggleSVGs(svgOne));
+        svgTwo.addEventListener('click', () => toggleSVGs(svgTwo));
+
+        const loadingScreen = document.getElementById('loader');
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadingScreen.classList.add('hidein')
+        })
     </script>
-  </section>
-
-  <section class="mt-10 px-28">
-    <div tabindex="0"
-      class="collapse bg-gradient-to-tr from-[#ff8741] to-[#ffc002]  text-primary-content focus:bg-orange-500 focus:text-secondary-content">
-      <div class="collapse-title font-bold">
-        شرکت ما کجاست؟
-      </div>
-      <div class="collapse-content">
-        <p>tabindex="0" attribute is necessary to make the div focusable</p>
-      </div>
-    </div>
-  </section>
-  <section class="mt-2 px-24">
-    <div tabindex="0"
-      class="collapse bg-gradient-to-tl from-[#FF9153] to-[#FFD143] text-primary-content focus:bg-secondary focus:text-secondary-content">
-      <div class="collapse-title font-bold">
-        چگونه سفارش دهیم؟
-      </div>
-      <div class="collapse-content">
-        <p>tabindex="0" attribute is necessary to make the div focusable</p>
-      </div>
-    </div>
-  </section>
-  <section class="mt-2 px-20">
-    <div tabindex="0"
-      class="collapse bg-gradient-to-br from-[#cf713a] to-[#f8d467] text-primary-content focus:bg-orange-300 focus:text-secondary-content">
-      <div class="collapse-title  font-bold">
-        رزومه و خدمات شرکت ما چیست؟
-      </div>
-      <div class="collapse-content">
-        <p>tabindex="0" attribute is necessary to make the div focusable</p>
-      </div>
-    </div>
-
-  </section>
-  <footer class="footer footer-center p-10 bg-primary text-primary-content mt-3">
-    <aside>
-      <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-        clip-rule="evenodd" class="inline-block fill-current">
-        <path
-          d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
-        </path>
-      </svg>
-      <p class="font-bold">
-        ساخته شده توسط تیم جکسروید <br>
-      </p>
-      <p>Copyright © 2024 -است wpcpersian تمامی حقوق مربوط سایت </p>
-    </aside>
-
-  </footer>
-  
+    <script type="module" src="./js/about.js"></script>
 </body>
 
 </html>
